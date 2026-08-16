@@ -5,7 +5,7 @@
 
 // IMPORTANT:
 // Replace YOUR_DERIV_APP_ID with your own Deriv Developer App ID.
-const DERIV_APP_ID = "YOUR_DERIV_APP_ID";
+const DERIV_APP_ID = "3480OibNUJ8jFhFXvevX8";
 
 const WS_URL =
   `wss://ws.derivws.com/websockets/v3?app_id=${DERIV_APP_ID}`;
