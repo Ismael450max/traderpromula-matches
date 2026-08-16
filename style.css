@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #070d18;
+  color: #f5f7fb;
+  min-height: 100vh;
+}
+
+.topbar {
+  background: #0b1322;
+  border-bottom: 1px solid #1d2a40;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h1 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.topbar p {
+  color: #7f8da6;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+#connectionStatus {
+  color: #ff5365;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.container {
+  width: 94%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 25px 0 50px;
+}
+
+.card {
+  background: #0c1526;
+  border: 1px solid #1d2b43;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* CONTROLS */
+
+.controls {
+  display: flex;
+  align-items: end;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.control label {
+  display: block;
+  color: #8190aa;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+select,
+button {
+  height: 44px;
+  border-radius: 9px;
+  padding: 0 16px;
+  font-size: 13px;
+  color: white;
+  background: #081225;
+  border: 1px solid #2a3b58;
+}
+
+select {
+  min-width: 215px;
+}
+
+button {
+  cursor: pointer;
+  background: #2678f2;
+  border-color: #2678f2;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#stopButton {
+  background: #17233a;
+  border-color: #2b3b57;
+}
+
+/* MARKET */
+
+.market {
+  display: grid;
+  grid-template-columns: 1fr 1fr 180px;
+  gap: 20px;
+  align-items: center;
+}
+
+.label {
+  color: #7f8da6;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.market h2 {
+  font-size: 26px;
+  margin-top: 8px;
+}
+
+.price strong {
+  display: block;
+  font-size: 28px;
+  margin-top: 8px;
+}
+
+.digitBox {
+  text-align: center;
+  background: #081225;
+  border: 1px solid #263753;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.digitBox strong {
+  display: block;
+  font-size: 44px;
+  margin-top: 5px;
+}
+
+/* STATISTICS */
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.stat span {
+  color: #8290aa;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.stat strong {
+  display: block;
+  font-size: 29px;
+  margin-top: 8px;
+}
+
+/* SECTION */
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.sectionHeader h2 {
+  font-size: 17px;
+}
+
+.sectionHeader span {
+  color: #8290aa;
+  font-size: 12px;
+}
+
+/* DIGITS */
+
+.digitGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.digitCard {
+  background: #081225;
+  border: 1px solid #233551;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.digitTitle {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.progress {
+  height: 7px;
+  background: #202f49;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 11px 0 7px;
+}
+
+.progressBar {
+  height: 100%;
+  background: #317ff4;
+  transition: width 0.3s ease;
+}
+
+.digitCount {
+  color: #8290aa;
+  font-size: 11px;
+}
+
+/* LOWER PANELS */
+
+.lowerPanels {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 18px;
+}
+
+.recentDigits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recentDigits span {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  background: #081225;
+  border: 1px solid #263754;
+  border-radius: 9px;
+  font-weight: bold;
+}
+
+/* ANALYSIS */
+
+.analysisRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #1e2c43;
+}
+
+.analysisRow:last-child {
+  border-bottom: none;
+}
+
+.analysisRow span {
+  color: #8290aa;
+}
+
+.analysisRow strong {
+  color: white;
+}
+
+/* DISCLAIMER */
+
+.disclaimer {
+  color: #8290aa;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .market {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .digitBox {
+    grid-column: 1 / -1;
+  }
+
+  .statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lowerPanels {
+    grid-template-columns: 1fr;
+  }
+
+  .digitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .topbar {
+    padding: 16px;
+  }
+
+  .container {
+    width: 96%;
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  select,
+  button {
+    width: 100%;
+  }
+
+  .market {
+    grid-template-columns: 1fr;
+  }
+
+  .digitBox {
+    grid-column: auto;
+  }
+
+  .statistics {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat {
+    padding: 15px;
+  }
+
+  .stat strong {
+    font-size: 24px;
+  }
+
+  .digitGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
